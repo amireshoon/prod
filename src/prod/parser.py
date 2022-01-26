@@ -42,14 +42,16 @@ def parse( project_path, exclude ):
 
         # Remove excludes
         if line.startswith("!"):
-            excludes.append(line[1:])
+            if line[1:] in files:
+                files.remove(line[1:])
             continue
 
         files.append(line)
-
+    
     exclude = tuple(excludes) + exclude
+    
     for file_name in exclude:
         if file_name in files:
             files.remove(file_name)
-
+    
     return files, exclude
