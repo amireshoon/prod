@@ -1,3 +1,4 @@
+from importlib.metadata import entry_points
 import setuptools
 
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -22,5 +23,14 @@ setuptools.setup(
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
-    python_requires=">=3.6"
+    include_package_data=True,
+    python_requires=">=3.6",
+    install_requires=[
+        'Click',
+    ],
+    entry_points={
+        'console_scripts': [
+            'prod = prod.prod:version',
+        ],
+    },
 )
