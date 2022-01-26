@@ -27,6 +27,7 @@ setuptools.setup(
     python_requires=">=3.6",
     install_requires=[
         'Click',
+        "rich"
     ],
     entry_points={
         'console_scripts': [
