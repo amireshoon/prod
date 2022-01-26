@@ -1,6 +1,6 @@
 from email.policy import default
 import click
-import prod_parser as parser
+import parser
 import pathlib
 import prod_logging as logging
 
