@@ -4,3 +4,4 @@ dist
 venv
 prod_amireshoon.egg-info
 prod.zip
+build

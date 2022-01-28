@@ -1,7 +1,5 @@
-from ctypes import util
 import parser
 import prod_logging as logging
-import os
 import archive
 
 log = logging.getLogger("rich")
